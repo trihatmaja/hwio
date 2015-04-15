@@ -29,9 +29,9 @@ func NewPCF8591(module hwio.I2CModule, address int) (*PCF8591) {
 	return result
 }
 
-func (d *PCF8591) ReadByte(chan int) (byte, error){
+func (d *PCF8591) ReadChannel(channel int) (byte, error) {
 	var val byte
-	switch chan {
+	switch channel {
 	    case 0:
 		val = REG_CHAN0
 	    case 1:
@@ -44,22 +44,6 @@ func (d *PCF8591) ReadByte(chan int) (byte, error){
 	return d.device.ReadByte(val)
 }
 
-func (d *PCF8591) Read(chan int, bit int)([]byte, error){
-	var val []byte
-        switch chan {
-            case 0:
-                val = REG_CHAN0
-            case 1:
-                val = REG_CHAN1
-            case 2:
-                val = REG_CHAN2
-            case 3:
-                val = REG_CHAN3
-        }
-        return d.device.Read(val, bit)
-
-} 
-
-func (d *PCF8591) WriteByte(val int){
+func (d *PCF8591) WriteByte(val byte) error {
 	return d.device.WriteByte(REG_WRITE, val)
 }
