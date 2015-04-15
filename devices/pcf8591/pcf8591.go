@@ -2,6 +2,7 @@ package pcf8591
 
 // reference :
 // http://blog.chrysocome.net/2012/12/i2c-analog-to-digital-converter.html
+// http://wiringpi.com/extensions/i2c-pcf8591/
 
 import (
 	"github.com/trihatmaja/hwio"
