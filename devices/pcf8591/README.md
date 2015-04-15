@@ -28,10 +28,8 @@ Get the PCF8591 device, so you make requests of it:
 
 Read the value:
 
-	// Get the value of channel 0, up to 3
-	val := converter.ReadByte(0)
-	// Get the value of channel 0, 2 bit
-	val := converter.Read(0, 2)
+	// Get the value of channel 0 up to 3
+	val := converter.ReadChannel(0)
 
 Write the value:
 
