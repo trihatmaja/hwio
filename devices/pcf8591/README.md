@@ -3,6 +3,9 @@ This package provides a simple way to connect to the PCF8591 AD/DA converter,
 a device which convert analog to digital converter with 4 channel and digital
 to analog converter with single channel.
 
+# Hardware Support
+Tested on Raspberry Pi with kernel 3.12
+
 # Usage
 Import the packages:
 
