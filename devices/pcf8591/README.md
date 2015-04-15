@@ -5,6 +5,7 @@ to analog converter with single channel.
 
 # Usage
 Import the packages:
+
 	// import the require modules
 	import(
 		"github.com/trihatmaja/hwio"
@@ -26,11 +27,13 @@ Get the PCF8591 device, so you make requests of it:
 	converter := pcf8591.NewPCF8591(i2c, 0)
 
 Read the value:
+
 	// Get the value of channel 0, up to 3
 	val := converter.ReadByte(0)
 	// Get the value of channel 0, 2 bit
 	val := converter.Read(0, 2)
 
 Write the value:
+
 	// Set the value to 0xFF
 	converter.WriteByte(0xFF)
