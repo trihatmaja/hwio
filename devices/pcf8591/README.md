@@ -1,7 +1,7 @@
 # PCF8591 I2C AD/DA Converter
 This package provides a simple way to connect to the PCF8591 AD/DA converter,
-a device which convert analog to digital converter with 4 channel and digital
-to analog converter with single channel.
+a device which convert analog to digital converter with 4 channel input and digital
+to analog converter with single channel output.
 
 # Hardware Support
 Tested on Raspberry Pi with kernel 3.12
